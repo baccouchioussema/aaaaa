@@ -1,0 +1,16 @@
+procedure insertion_sort(var a: array of integer; n: integer);
+var
+   i, j, key: integer;
+begin
+   for i := 1 to n - 1 do
+   begin
+      key := a[i];
+      j := i - 1;
+      while (j >= 0) and (a[j] > key) do
+      begin
+         a[j + 1] := a[j];
+         j := j - 1;
+      end;
+      a[j + 1] := key;
+   end;
+end;
